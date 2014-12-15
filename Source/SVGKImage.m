@@ -316,6 +316,7 @@ static NSMutableDictionary* globalSVGKImageCache;
 
 - (void)dealloc
 {
+    [self removeObserver:self forKeyPath:@"DOMTree.viewport"];
 #if ENABLE_GLOBAL_IMAGE_CACHE_FOR_SVGKIMAGE_IMAGE_NAMED
     if( self->cameFromGlobalCache )
     {
