@@ -163,7 +163,7 @@ static float cachedDevicePixelsPerInch;
 	
 	if( [platform hasPrefix:@"iPod"]) // catch-all for higher-end devices not yet existing
 	{
-		NSAssert(FALSE, @"Not supported yet: you are using an iPod that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
+		DDLogCWarn(@"Not supported yet: you are using an iPod that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
 		return 326.0f;
 	}
 	
@@ -175,7 +175,7 @@ static float cachedDevicePixelsPerInch;
 		return 264.0f;
 	if( [platform hasPrefix:@"iPad"]) // catch-all for higher-end devices not yet existing
 	{
-		NSAssert(FALSE, @"Not supported yet: you are using an iPad that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
+		DDLogCWarn(@"Not supported yet: you are using an iPad that didn't exist when this code was written, we have no idea what the pixel count per inch is!");
 		return 264.0f;
 	}
 	
